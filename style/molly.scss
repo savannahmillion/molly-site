@@ -23,6 +23,18 @@ body {
 p {
 	font-family: $sans-serif;
 	font-weight: 500;
+	line-height: 30px;
+}
+
+h2 {
+	font-size: 2em;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 1.3em;
+	font-weight: 500;
+	line-height: 35px;
 }
 
 a {
@@ -38,12 +50,20 @@ nav {
 	font-weight: 700;
 }
 
-.sideways {
+.rotate-left {
 	-webkit-transform: rotate(-90deg);
 	-moz-transform: rotate(-90deg);
 	-o-transform: rotate(-90deg);
 	-ms-transform: rotate(-90deg);
-	-sand-transform: rotate(-90deg);
+	//-sand-transform: rotate(-90deg);
+}
+
+.rotate-right {
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	//-sand-transform: rotate(-90deg);
 }
 
 // LAYOUT
@@ -140,6 +160,8 @@ nav {
 
 .project {
 	@include span-columns(6);
+	//@include omega();
+	margin-bottom: 40px;
 	img {
 		width: 100%;
 		height: auto;
@@ -147,16 +169,27 @@ nav {
 }
 
 article {
-	@include span-columns(6);
+	@include span-columns(5);
+	//@include shift(1);
+	position: relative;
 	border: 4px solid $darkGray;
-	padding: 20px;
+	padding: 30px 80px 30px 30px;
+	margin-bottom: 40px;
+	h3 {
+		padding-bottom: 15px;
+		border-bottom: 4px $darkGray solid;
+		margin-bottom: 10px;
+	}
 }
 
 .article-title {
 	background-color: $Peach;
+	position: absolute;
+	right: -100px;
+	top: 35%;
 	border: 4px solid $darkGray;
 	padding: 10px;
-	//width: 120px;
+	//@include transform(translateY(50%));
 }
 
 .bullet {
