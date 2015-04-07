@@ -1,0 +1,34 @@
+<html lang="en">
+	<head>
+		<title>{{ _site_name }}</title>
+		<link rel="stylesheet" href="{{ theme:css }}" />
+
+		<script src="//use.typekit.net/dpy7jcn.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+		
+		<link rel="shortcut icon" type="image/png" href="{{ theme:img src="favicon.png" }}">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+		<meta name="description" content="Molly is the best">
+	</head>
+
+	<body>
+		<div>
+			<div id="fernLeft">
+				<img src="{{ theme:img src="fern-left.png" }}">
+			</div>
+			<div id="fernRight">
+				<img src="{{ theme:img src="fern-right.png" }}">
+			</div>
+			{{ theme:partial src="header" }}
+		</div>
+
+		{{ layout_content }}
+
+		<footer>
+			<p>&copy; 2015 MOLLY BRAMLET</p>
+		</footer>
+
+	<script src="{{ theme:js src="retina.js"}}"></script>
+	</body>
+</html>
